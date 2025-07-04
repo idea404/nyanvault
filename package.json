@@ -1,0 +1,20 @@
+{
+  "name": "usdvy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.20.0",
+    "typescript": "^5.3.2",
+    "ts-node": "^10.9.1",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  }
+} 
