@@ -6,12 +6,12 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 /**
- * @title USDvyVault
+ * @title NYANVault
  * @notice ERC20 token representing a share of the underlying vault assets.
  *         Users deposit USDC to mint shares. Off-chain program updates `totalAssets`
  *         to reflect performance of the strategy so redemption amounts grow over time.
  */
-contract USDvyVault is ERC20, Ownable {
+contract NYANVault is ERC20, Ownable {
     /// @notice Underlying USDC token (6 decimals).
     IERC20 public immutable usdc;
 
@@ -42,7 +42,7 @@ contract USDvyVault is ERC20, Ownable {
     event WithdrawalRequested(uint256 indexed requestId, address indexed caller, address indexed receiver, uint256 shares, uint256 assets);
     event WithdrawalProcessed(uint256 indexed requestId);
 
-    constructor(address usdcAddress) ERC20("USDvy Vault Share", "USDVY") Ownable(msg.sender) {
+    constructor(address usdcAddress) ERC20("NYAN Vault Share", "NYAN") Ownable(msg.sender) {
         require(usdcAddress != address(0), "USDC address zero");
         usdc = IERC20(usdcAddress);
     }

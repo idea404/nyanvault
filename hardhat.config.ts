@@ -16,9 +16,9 @@ const config: HardhatUserConfig = {
       url: process.env.ARBITRUM_SEPOLIA_RPC || "",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : []
     },
-    worldchainTestnet: {
-      url: process.env.WORLDCHAIN_TESTNET_RPC || "",
-      chainId: 999999, // TODO: replace with actual Worldchain testnet chainId
+    worldchainSepolia: {
+      url: process.env.WORLDCHAIN_SEPOLIA_RPC || "https://worldchain-sepolia.drpc.org",
+      chainId: 4801,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : []
     }
   }

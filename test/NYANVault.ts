@@ -12,7 +12,7 @@ const toUSDC = (amount: string | number): bigint => {
 
 const ONE_USDC_IN_SHARES = 1_000_000_000_000n; // 1e12
 
-describe("USDvyVault", function () {
+describe("NYANVault", function () {
   let owner: any;
   let user1: any;
   let user2: any;
@@ -36,7 +36,7 @@ describe("USDvyVault", function () {
 
     const usdcAddr = await usdc.getAddress();
 
-    const Vault = await hardhatEthers.getContractFactory("USDvyVault");
+    const Vault = await hardhatEthers.getContractFactory("NYANVault");
     vault = (await Vault.deploy(usdcAddr)) as any;
     await vault.waitForDeployment();
 
@@ -157,4 +157,4 @@ describe("USDvyVault", function () {
       expect(await vault.totalAssets()).to.equal(newTotal);
     });
   });
-});
+}); 
