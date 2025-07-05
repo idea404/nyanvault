@@ -9,7 +9,7 @@
 ---
 
 ## What is NYANVault?
-NYANVault is a minimal, gas-efficient ERC-4626–style vault (without the interface) built for the hackathon.  Users deposit USDC and receive **NYAN** (18-decimal) vault shares.  An off-chain strategy program periodically updates the vault's Net Asset Value (`totalAssets`) so that 1 share automatically tracks underlying performance.
+NYANVault is a minimal, gas-efficient ERC-4626–style vault (without the interface).  Users deposit USDC and receive **NYAN** (18-decimal) vault shares.  An off-chain strategy program periodically updates the vault's Net Asset Value (`totalAssets`) so that 1 share automatically tracks underlying performance.
 
 Key features:
 
